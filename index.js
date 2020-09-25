@@ -1,9 +1,10 @@
 // Set appId
-const appId = '3d3a987599d4c9917cb69d43602f3fc9';
+const appId = '';
 
 // Create function getDataForCity that fetches weather info from openweathermap api 
 const getDataForCity = city => fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${appId}&units=metric`)
     .then(response => response.json());
+    
 
 // Create function to render the weather info
 const createCardHtml = (name, emoji, temp, feelsLike, description) => `
@@ -15,8 +16,8 @@ const createCardHtml = (name, emoji, temp, feelsLike, description) => `
             <div class="col-10">
                 <div class="card-body">
                     <div class="row card-title justify-content-between align-items-center mr-3 mb-1">
-                        <h4>${name}</h4>
-                        <h6>${temp}c, feels like ${feelsLike}c</h6>
+                        <h3>${name}</h3>
+                        <h6>${temp}c, feels like ${feelsLike}C</h6>
                     </div>
                     <div class="row">
                         <h5 class="card-subtitle text-muted">${description}</h5>
@@ -43,19 +44,20 @@ const emojis = {
     '04n': '☁️',
     '09n': '🌧',
     '10n': '🌦',
-    '11n': '⛈',-
+    '11n': '⛈',
     '13n': '❄️',
     '50n': '💨',
 };
 
-// 
+
 const submitButton = document.querySelector('#submit-button');
 const cityInput = document.querySelector("#city-input");
 const cityContainer = document.querySelector("#city-container");
-
+const citiesList = document.querySelector('#cities');
 // event.listener for submit button
 
 submitButton.addEventListener('click', () => {
+    
     // Get the city from the input field
     const city = cityInput.value; 
     // Get the weather data for the city
@@ -70,6 +72,9 @@ submitButton.addEventListener('click', () => {
             // Create the card HTML
             const cardHtml = createCardHtml(name, emoji, temp, feelsLike, description);
             // Render
-            cityContainer.innerHTML = cardHtml;
+            cityContainer.innerHTML = cardHtml; 
         });
+
+   
+      
 });
