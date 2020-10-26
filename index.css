@@ -2,23 +2,21 @@ button {
     cursor: pointer;
   }
 
-
-
 body {
-    font-family: 'Pacifico', cursive;
     background-image: url(Tagore\ Love\ Quote\ Desktop\ Wallpaper.png);
     padding: 50px;
   }
 
-  h1:hover {
-    color: tomato;
-    /* font-size: 2.5em; */
-    margin-right: 20px;
-  }
- .card-body:hover {
+h1 {
+  font-family: 'Pacifico', cursive;
+}
 
-  }
-  a:hover {
-    /* color: tomato; */
+h1:hover {
+    color: tomato;
     font-size: 2.5em;
-  }
+    margin-right: 20px;
+}
+ 
+a:hover {
+    font-size: 2.5em;
+}

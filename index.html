@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <!-- Bootstrap CSS -->
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
      <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
      <link rel="stylesheet" href="index.css">
@@ -15,7 +14,7 @@
             <div class="col-md-8 col-lg-6">
                <h1>What is the Weather Today?</h1>
                   <div class="input-group">
-                    <input id="city-input" class="form-control" type="text" placeholder="Search for a City">  
+                    <input id="newCityInput" class="form-control" type="text" placeholder="Search for a City">  
                     <button id ="submit-button" class="btn btn-danger">Sutmit</button> 
                 </div>  
             </div>
@@ -24,7 +23,7 @@
     <div class="container">
         <div class="card-body">
             <div class="list-group" id="cities-list">
-              <div id="city-container" class="col-md-8 col-lg-6">
+              <div id="newCityCard" class="col-md-8 col-lg-6">
                 <ul class="cities"></ul>       
                 </div>
             </div>
@@ -32,18 +31,29 @@
         </div>
     </div>
 
-        <!-- Optional JavaScript -->
-        <script src = index.js></script> 
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <!-- JavaScript -->
+        <script src = "js/main.js"></script> 
+        <script src = "js/cityCardManager.js"></script>
+        <script src = "js/index.js"></script> 
+        
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>    
 </body>
+<div class="container">
+<footer class="footer">Made by <a href="https://twitter.com/stepanktank">@stepanktank</a></footer>
+</div> 
+<!-- Audio -->
+<div class="container">
+      <br>
+      <br>
+      <audio id="audio">
+        <source src ="bensound-thelounge.mp3" type="audio/mp3">
+      </audio>
 
-    <footer>
-      <div class="container">  
-        <p>Made by <a href="https://twitter.com/stepanktank">@stepanktank</a></p>
-       
-      </div>
-    </footer>
+      <button id="playPauseBTN" onclick="playPause()">Play &#9658;</button>
+    
+      <button onclick="stop()">Stop</button>
+</div>
+
 </html>
