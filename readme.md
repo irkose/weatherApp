@@ -1,7 +1,7 @@
 # About This App
 This is a simple weather app that is using api.
 
-To use the search function, uou will need to obtain an API key to use this app.
+To use the search function, you will need to obtain an API key to use this app.
 
 Please go to https://openweathermap.org/ and sign in to create one.
 
